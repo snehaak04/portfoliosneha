@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sneha A K</title>
+        <link rel="icon" href="myfavicon.svg" type="image/svg+xml">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="Portfolio.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <style>
+            body {
+                height: 200vh;
+            }
+            .imagehead {
+                overflow: hidden; 
+                position: relative;
+                top: 0;
+                left: 0; 
+                width: 100vw; 
+                height: 100vh; 
+                z-index: 100;
+            }
+    
+            .imagehead img {
+                height: auto;
+                width: auto; 
+                transition: transform 0.1s;
+                position: absolute; 
+                top: 45%;
+                left: 50%; 
+                transform: translate(-50%, -50%) scale(1); 
+            }
+            #bodytexthere{
+                margin-top: -175px;
+            }
+            @media (max-width:600px){
+                .imagehead img{
+                    width:100%
+                }
+                .imagehead{
+                    height: 33vh;
+                }
+                #bodytexthere{
+                    margin-top: 0%;
+                }
+                .someth{
+                    margin-left: 10%;
+                }
+                .projhead{
+                    overflow: visible;;
+                }
+                .projdesc2 img{
+                    max-width: 100vw;
+                    margin: 24px 0;
+                    border-radius: 0%;
+                }
+                .projdesc2{
+                    overflow: visible;
+                    margin: 0 10%;
+                }
+            }
+            
+        </style>
+    </head>
+    <body>
+        <!--back button-->
+        <a href="PortfolioProjects.html" class="animatedbox2 svgarrow" style="z-index: 3000;">
+            <svg width="64" height="64" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg" class="rotated">
+              <g id="navarrow">
+              <rect id="Rectangle 24" x="69.8787" y="36" width="47.9117" height="47.9117" rx="10.5" transform="rotate(135 69.8787 36)" stroke="#FCFCFD" stroke-width="3"/>
+              <path id="Icon" d="M35.7251 46.478V20.9309M35.7251 20.9309L26.1791 30.5111M35.7251 20.9309L45.271 30.5111" stroke="#FCFCFD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              </svg>          
+        </a>
+
+        <div class="projdesc2">
+            <div class="projhead someth" >
+                <h1>Niyati</h1>
+                <h2>A Skincare Service</h2>
+            </div>
+        </div>
+        <div class="imagehead">
+            <img id="zoomImage" src="niyatimac.svg" alt="Zoomable Image">
+        </div>
+        <script>
+            window.addEventListener('scroll', function() {
+                const image = document.getElementById('zoomImage');
+                const scrollY = window.scrollY;
+        
+                if (window.innerWidth > 600) {
+                    const scale = Math.max(0.5, 1 - scrollY / 500); 
+
+                    image.style.transform = `translate(-50%, -50%) scale(${scale})`;
+                } else {
+                    image.style.transform = `translate(-50%, -50%) scale(1)`; 
+                }
+            });
+        </script>
+
+        <div class="projdesc2" style="padding: 0;" id="bodytexthere">
+            <div class="projhead" >
+                <h2>The Problem</h2>
+                <p class="minibod">Indian skin types are very diverse, and yet companies market most of their products to the masses without clarifying their target user. This leads to customers experiencing heavy trial and error to find the right product for their skin.<br><br>
+
+                    Misleading advertising and unawareness of the correct usage of skincare products exists for consumers seeking better products, due to a lack of transparency from brands. This leads to adverse skin reactions and long-term health risks.<br><br></p>
+                <h2>Findings</h2>
+                <p class="minibod">Research was done on different skin types and existing regulations for product marketing. We went to skincare stores and malls to interview people on their experience with skincare.<br><br>
+
+                    From this point, we realised that each person has a unique need of their own. If they do not consult a dermatologist, they have no reliable source to get product recommendations from. Users want the one golden product that solves their issues without having to go through long research processes and consultations.<br><br></p>
+                <img src="niyatilogo.svg" width="100%">
+                <p class="minibod">Then, we came up with a service that acts as the middleman between brands and customers. The skincare market is flooded with products that confuse people already. So, our service helps ease the consultation process by recommending existing products in the market that cater to our user’s needs.<br><br></p>
+                <h2>What Our Service Does Better</h2>
+                <img src="niyati1.svg" width="100%">
+                <p class="minibod">Niyati helps consumers navigate through trial and error and strives to remove the error from the equation. We aim to help our users be more aware of the products they use.<br><br>
+                    Users can get skincare solutions by visiting our store to consult a dermatologist and cosmetologist for personalised experiences. They can also get more information on skin products and the ingredients used in them on our website. Niyati aims to reduce misinformation along with trial and error in the skincare industry while empowering individuality and compassion.</p>
+                <h2>Other Key Features of Niyati</h2>
+                <img src="niyati2.svg" width="100%">
+            </div>
+        </div>
+
+        <!--footer-->
+        <script>
+            window.addEventListener('scroll', () => {
+              const footer = document.querySelector('.footer');
+              const footerPosition = footer.getBoundingClientRect().top;
+              const windowHeight = window.innerHeight;
+              if (footerPosition <= window.innerHeight) {
+                  footer.classList.add('sticky');
+                  document.querySelector('.footer').style.backgroundColor = '#0D0F1C';
+              } else {
+                  footer.classList.remove('sticky');
+                  document.querySelector('.footer').style.backgroundColor = '#61C0FF';
+              }
+            });
+          </script>
+          <div class="footer">
+            <div class="contact">
+              <div class="footertext">
+                <h4 class="fadeee minibod" style="color: #61C0FF; font-weight: 450;margin: 0%;">Tags</h4>
+                <div class="footericons fadeee">
+                  <h6>Interaction Design, Service Design</h6>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="backtotop animatedbox svgarrow">
+              <svg width="64" height="64" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="navarrow">
+                <rect id="Rectangle 24" x="69.8787" y="36" width="47.9117" height="47.9117" rx="10.5" transform="rotate(135 69.8787 36)" stroke="#FCFCFD" stroke-width="3"/>
+                <path id="Icon" d="M35.7251 46.478V20.9309M35.7251 20.9309L26.1791 30.5111M35.7251 20.9309L45.271 30.5111" stroke="#FCFCFD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                </svg>          
+            </a>
+          </div>      
+    </body>

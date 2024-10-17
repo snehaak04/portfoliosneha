@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sneha A K</title>
+        <link rel="icon" href="myfavicon.svg" type="image/svg+xml">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="Portfolio.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <style>
+            img {
+                border-radius: 16px;
+                width: 100%;
+                height: auto;
+                margin: 24px 0;
+            }
+            .ccpic{
+                display: flex;
+                flex-direction: row;
+                width:100%;
+                height:50vh;
+                justify-content: space-between;
+                border-radius: 16px;
+                align-items: center;
+            }
+            .ccpic img{
+                object-fit: cover;
+                height:100%;
+                width: 49%;
+                border-radius: 16px;
+            }
+            @media (max-width:600px){
+                .ccpic{
+                    flex-direction: column;
+                    height: 100vh;
+                }
+                .ccpic img{
+                    width:100%;
+                }
+                .projdesc{
+                    text-align: left;
+                }
+                h2{
+                    width: 100%;
+                }
+                .lastpic{
+                    margin-top: 64px;
+                }
+                .projhead{
+                    margin: auto;
+                    text-align: left;
+                    margin-left: 2%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!--back button-->
+        <a href="PortfolioProjects.html" class="animatedbox2 svgarrow">
+            <svg width="64" height="64" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg" class="rotated">
+              <g id="navarrow">
+              <rect id="Rectangle 24" x="69.8787" y="36" width="47.9117" height="47.9117" rx="10.5" transform="rotate(135 69.8787 36)" stroke="#FCFCFD" stroke-width="3"/>
+              <path id="Icon" d="M35.7251 46.478V20.9309M35.7251 20.9309L26.1791 30.5111M35.7251 20.9309L45.271 30.5111" stroke="#FCFCFD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              </svg>          
+        </a>
+
+        <div class="projdesc2" style="padding-bottom: 0;">
+            <div class="projhead" >
+                <h1>Cornucopia</h1>
+                <h2>Greek Mythology Themed Restaurant</h2>
+            </div>
+        </div>
+        <div class="projdesc">
+            <img src="cc1.jpg" style="margin-top: 0;">
+            <h2>Brand Story</h2>
+            <p class="minibod">Inspired by Demeter’s mythical horn that overflows with abundance, Cornucopia was born from a desire to share the love of Greek myths with the world. We believe that food is a universal language, capable of transporting you to different times and places. Every dish becomes a portal to a story, inviting you to delve deeper into the captivating world of Greek mythology. We want to use our restaurants as communal spaces where people can gather, share their passion for myths and form a fun community over a good meal.</p>
+            <img src="cc2.jpg">
+            <h2>Vision</h2>
+            <p class="minibod">To be a hub for Greek mythology enthusiasts and build a community with people invested in the theme and who want to connect with other people who also share the same interests as them over a unique dining experience.<br><br></p>
+            <h2>Mission</h2>
+            <p class="minibod">To offer a menu inspired by mythology using storytelling to create innovative dishes. We are catered towards people who are enthusiastic about Greek culture and are open to involving themselves more in the community by connecting through food.<br><br></p>
+            <h2>Aim</h2>
+            <p class="minibod">To build a diverse community that connects people who are interested in Greek mythology and culture and want to learn more about it through new innovative food.<br><br>
+
+                Click <a href="ccmanual.pdf" style="color: #61C0FF" target="_blank">here</a> to know more about Cornucopia’s brand guidelines.</p>
+            <!--<img src="cc3.png">-->
+            <div class="ccpic">
+                <img src="cc4.png">
+                <img src="cc5.png">
+            </div>
+            <div class="projdesc3" style="padding-top: 0%;max-height: fit-content;">
+                <img src="cc6.png" class="lastpic">
+                <p class="minibod">Click <a href="ccenv.pdf" style="color: #61C0FF" target="_blank">here</a> to see more of the brand environment.</p>
+            </div>
+        </div>
+        
+
+
+        <!--footer-->
+        <script>
+            window.addEventListener('scroll', () => {
+              const footer = document.querySelector('.footer');
+              const footerPosition = footer.getBoundingClientRect().top;
+              const windowHeight = window.innerHeight;
+              if (footerPosition <= window.innerHeight) {
+                  footer.classList.add('sticky');
+                  document.querySelector('.footer').style.backgroundColor = '#0D0F1C';
+              } else {
+                  footer.classList.remove('sticky');
+                  document.querySelector('.footer').style.backgroundColor = '#61C0FF';
+              }
+            });
+          </script>
+          <div class="footer">
+            <div class="contact">
+              <div class="footertext">
+                <h4 class="fadeee minibod" style="color: #61C0FF; font-weight: 450;margin: 0%;">Tags</h4>
+                <div class="footericons fadeee">
+                  <h6>Branding</h6>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="backtotop animatedbox svgarrow">
+              <svg width="64" height="64" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="navarrow">
+                <rect id="Rectangle 24" x="69.8787" y="36" width="47.9117" height="47.9117" rx="10.5" transform="rotate(135 69.8787 36)" stroke="#FCFCFD" stroke-width="3"/>
+                <path id="Icon" d="M35.7251 46.478V20.9309M35.7251 20.9309L26.1791 30.5111M35.7251 20.9309L45.271 30.5111" stroke="#FCFCFD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                </svg>          
+            </a>
+          </div> 
+    </body>
+</html>

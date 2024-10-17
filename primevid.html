@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sneha A K</title>
+        <link rel="icon" href="myfavicon.svg" type="image/svg+xml">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="Portfolio.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <style>
+            img {
+                border-radius: 16px;
+                width: 100%;
+                height: auto;
+                margin: 24px 0;
+            }
+            li b{
+                font-weight: 450;
+            }
+            li {
+                padding: 8px 0;
+            }
+            ul{
+                margin: 24px 0;
+            }
+            @media (max-width:600px){
+                .projhead{
+                    margin-left: 10%;
+                }
+                .projdesc{
+                    overflow: visible;
+                }
+                .projdesc img{
+                    width: 100vw;
+                    margin: 24px -360px;
+                    border-radius: 0%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!--back button-->
+        <a href="PortfolioProjects.html" class="animatedbox2 svgarrow">
+            <svg width="64" height="64" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg" class="rotated">
+              <g id="navarrow">
+              <rect id="Rectangle 24" x="69.8787" y="36" width="47.9117" height="47.9117" rx="10.5" transform="rotate(135 69.8787 36)" stroke="#FCFCFD" stroke-width="3"/>
+              <path id="Icon" d="M35.7251 46.478V20.9309M35.7251 20.9309L26.1791 30.5111M35.7251 20.9309L45.271 30.5111" stroke="#FCFCFD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              </svg>          
+        </a>
+        <div class="projdesc2">
+            <div class="projhead" >
+                <h1>Prime Video</h1>
+                <h2>User Testing Case Study</h2>
+            </div>
+        </div>
+        <div class="projdesc" style="padding-top: 36px;text-align: left;">
+            <img src="prime1.png">
+            <h2>About the Study</h2>
+            <p class="minibod">This report details the findings of a usability test conducted on the Amazon Prime Video website. The test aimed to evaluate the user experience for a representative sample of Prime Video's target audience. Users were given 4 tasks that they had to complete and their process was then studied to identify any hindrances.<br><br></p>
+            <h2>Scope</h2>
+            <p class="minibod">The usability testing focused on understanding how college students (18-24 years old) navigate and interact with the Prime Video platform. We'll be looking at their experience with search functions, content discovery, and overall ease of use to identify areas for improvement specifically for this younger demographic.<br><br>The insights gained from this test will be used to:</p>
+            <ul class="minibod">
+                <li>Enhance content discoverability and navigation functionalities.</li>
+                <li>Optimise playback controls and address any technical issues.</li>
+                <li>Improve existing accessibility features.</li>
+                <li>Identify areas for potential feature development to better cater to user needs.</li>
+            </ul>
+            <img src="prime2.png">
+            <h2>The Process</h2>
+            <ul class="minibod">
+                <li>Participants were asked some basic screening questions to collect demographic and relevant background information to understand the participant's experience level and context regarding the application.</li>
+                <li>They were then asked to perform 4 tasks on the Prime Video website that simulate common tasks that a typical user would perform with the product.</li>
+                <li>These tasks evaluate the product’s usability, effectiveness, and user satisfaction.</li>
+            </ul>
+            <img src="prime3.png">
+            <h2>Findings</h2>
+            <ul class="minibod">
+                <li>Users couldn’t easily see all the information about the content they were about to stream, even though it was present on screen. They gave up and only read the synopsis of what they were about to watch.</li>
+                <li>Some users did not identify the drop-down to change seasons. They had to search for the specific season they wanted to watch.</li>
+                <li>The search bar suggestions prompted content unavailable on the service: users who clicked on the prompts were disappointed and had to go back.</li>
+                <li>Users did not know what to click when the search result showed multiple cards for the same show. There was no label specifying the season number. They had to hover over each card individually to find the right season.</li>
+                <li>One user couldn’t skip to the next episode while streaming. They had to manually drag the slider to the end of the episode to get to the next one.</li>
+                <li>Users weren’t sure if they found the correct FAQ to help their query: the language used was too integrated into the service and not user-friendly. Most resorted to clicking on random queries until they found what they wanted.</li>
+            </ul>
+            <p class="minibod"><br><br>With these findings, we decided to modify the interface slightly to improve upon the issues our users faced during the test.</p>
+            <img src="prime4.png">
+        </div>
+
+        <!--footer-->
+        <script>
+            window.addEventListener('scroll', () => {
+              const footer = document.querySelector('.footer');
+              const footerPosition = footer.getBoundingClientRect().top;
+              const windowHeight = window.innerHeight;
+              if (footerPosition <= window.innerHeight) {
+                  footer.classList.add('sticky');
+                  document.querySelector('.footer').style.backgroundColor = '#0D0F1C';
+              } else {
+                  footer.classList.remove('sticky');
+                  document.querySelector('.footer').style.backgroundColor = '#61C0FF';
+              }
+            });
+          </script>
+          <div class="footer">
+            <div class="contact">
+              <div class="footertext">
+                <h4 class="fadeee minibod" style="color: #61C0FF; font-weight: 450;margin: 0%;">Tags</h4>
+                <div class="footericons fadeee">
+                  <h6>Interaction Design, UX Research, Case Study</h6>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="backtotop animatedbox svgarrow">
+              <svg width="64" height="64" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="navarrow">
+                <rect id="Rectangle 24" x="69.8787" y="36" width="47.9117" height="47.9117" rx="10.5" transform="rotate(135 69.8787 36)" stroke="#FCFCFD" stroke-width="3"/>
+                <path id="Icon" d="M35.7251 46.478V20.9309M35.7251 20.9309L26.1791 30.5111M35.7251 20.9309L45.271 30.5111" stroke="#FCFCFD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                </svg>          
+            </a>
+          </div>      
+    </body>
+</html>

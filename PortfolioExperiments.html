@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<!--experiments page-->
+<html lang="en">
+    <head>
+        <title>Sneha A K</title>
+        <link rel="icon" href="myfavicon.svg" type="image/svg+xml">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="Portfolio.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <style>
+            .expcontainer{
+                margin:20px 0;
+            }
+            .expbox,.expbox2 {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                gap:16px;
+                margin: 36px 0;
+                padding: 36px 36px;
+            }
+
+            .expbox2{
+                padding: 0 36px;
+                padding-top: 36px;
+            }
+
+            .expbox2 img {
+                width: 24%; 
+                height: auto; 
+                border-radius: 16px;
+            }
+            .expvid {
+                display: flex;
+                width: 50%;
+                justify-content: space-between;
+            }
+            .expvid video {
+                width: 49%;
+                height: auto;
+                border-radius: 16px;
+            }
+            .expvid2 video{
+                width: 45vw;
+                height: auto;
+                border-radius: 16px;
+            }
+
+            .expdesc {
+                width: 50%; 
+            }
+
+            .leftie {
+                padding-right: 10%;
+                text-align: right;
+            }
+
+            @media (max-width: 600px) {
+                .expbox {
+                    flex-direction: column;
+                    padding: 36px 16px;
+                }
+                .expbox2{
+                    flex-direction: column;
+                    padding: 0 16px;
+                    padding-top: 36px;
+                }
+
+                .expbox2 img {
+                    width: 100%;
+                    padding-left: 0; 
+                }
+
+                .expdesc {
+                    margin-top: 16px; 
+                    text-align: center;
+                    margin-bottom: 16px; 
+                    padding: 0;
+                    width: 100%; 
+                    padding-left: 0;
+                }
+                .expvid {
+                    flex-direction: column;
+                }
+
+                .expvid video {
+                    width: 100%;
+                    margin-bottom: 16px;
+                }
+                .expvid2 video {
+                    width: 100%; 
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="topnav" id="myTopnav">
+            <div class="svgcontainer">
+              <a href="index.html">
+                <svg class="staticsvg" width="4vh" height="4vh" viewBox="0 0 371 370" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; z-index: 1;">
+                  <path d="M343 28H92C56.6538 28 28 56.6538 28 92V178.091C28 213.437 56.6538 242.091 92 242.091H190" stroke="#FCFCFD" stroke-width="52" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M181 141.431H279C314.346 141.431 343 170.084 343 205.431V278C343 313.346 314.346 342 279 342H28" stroke="#FCFCFD" stroke-width="52" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            
+                <svg class="logosvg" width="4vh" height="4vh" viewBox="0 0 371 370" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; z-index: 2;">
+                  <path d="M343 28H92C56.6538 28 28 56.6538 28 92V178.091C28 213.437 56.6538 242.091 92 242.091H190" stroke="#61C0FF" stroke-width="52" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M181 141.431H279C314.346 141.431 343 170.084 343 205.431V278C343 313.346 314.346 342 279 342H28" stroke="#61C0FF" stroke-width="52" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                  
+                </a>
+            </div>
+            <a class="navtag" href="PortfolioAbout.html">About</a>
+            <a class="navtag" href="PortfolioProjects.html">Projects</a>
+            <a class="navtag active" href="PortfolioExperiments.html">Experiments</a>
+        </div>
+        <script>
+            function myFunction() { //this is to make it responsive
+              var x = document.getElementById("myTopnav");
+              if (x.className === "topnav") {
+                x.className += " responsive";
+              } else {
+                x.className = "topnav";
+              }
+            }
+            //now this is to track the scroll direction
+            let lastScrollTop = 0; 
+            const navbar = document.getElementById('myTopnav');
+
+            window.addEventListener('scroll', function() {
+                const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (currentScroll > lastScrollTop) {
+                    navbar.style.top = "-80px";
+                } else {
+                    navbar.style.top = "0";
+                }
+
+                lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+            });
+        </script>
+        <div class="projline">
+            <div style="width: 80%;">
+              <h1>Experiments</h1>
+              <p>Mini projects I previously worked on.</p>
+            </div>
+        </div>
+        <div style="background-color: #61C0FF;color: #0D0F1C;">
+            <div class="expbox2">
+                <img src="zinegd1.jpg">
+                <img src="zinegd2.jpg">
+                <img src="zinegd3.jpg">
+                <img src="zinegd4.jpg">
+            </div>
+            <h3 style="text-align: center;padding-bottom: 24px;">Zine: A day in design school</h3>
+        </div>
+        <div class="expcontainer">
+            <div class="expbox">
+                <div class="expdesc leftie">
+                    <h3>Logo animation</h3>
+                </div>
+                <div class="expvid">
+                    <video src="supply6.mp4" muted autoplay loop></video>
+                </div>
+            </div>
+            
+            <div class="expbox" style="background-color: #61C0FF;color: #0D0F1C;">
+                <div class="expvid2">
+                    <video src="unlogged.mp4" controls muted poster="unlog.png"></video>
+                </div>
+                <div class="expdesc">
+                    <h3>Landing page for a website</h3>
+                </div>
+            </div>
+
+            <div class="expbox">
+                <div class="expdesc leftie">
+                    <h3>Motion study animation</h3>
+                </div>
+                <div class="expvid">
+                    <video src="birds.mp4" muted autoplay loop></video>
+                    <video src="cake.mp4" muted autoplay loop></video>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!--footer-->
+        <script>
+            window.addEventListener('scroll', () => {
+            const footer = document.querySelector('.footer');
+            const footerPosition = footer.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            if (footerPosition <= window.innerHeight) {
+                footer.classList.add('sticky');
+                document.querySelector('.footer').style.backgroundColor = '#0D0F1C';
+            } else {
+                footer.classList.remove('sticky');
+                document.querySelector('.footer').style.backgroundColor = '#61C0FF';
+            }
+            });
+        </script>
+        <div class="footer">
+            <div class="contact">
+            <div class="footertext">
+                <h5 class="fadeee">Let's get in contact!</h5>
+                <div class="footericons fadeee">
+                <a href="mailto:snehaak3104@gmail.com" style="text-decoration:none">
+                    <div class="svgbox">
+                    <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_159_430)">
+                        <path d="M34.6072 4.12598H4.20723C2.10773 4.12598 0.407227 5.82648 0.407227 7.92598V30.726C0.407227 32.8255 2.10773 34.526 4.20723 34.526H34.6072C36.7067 34.526 38.4072 32.8255 38.4072 30.726V7.92598C38.4072 5.82648 36.7067 4.12598 34.6072 4.12598ZM34.6072 12.1744L19.4072 21.4502L4.20723 12.1744V7.92598H34.6072V12.1744Z" fill="#FCFCFD"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_159_430">
+                        <rect width="38" height="38" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                    </div>                          
+                </a>
+                <a href="https://www.linkedin.com/in/sneha-a-k-1864b5278/">
+                    <div class="svgbox">
+                    <svg width="30.4" height="30.4" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_163_438)">
+                        <path d="M35.1897 0H2.80488C2.79474 0 2.78334 0 2.77067 0C1.25152 0 0.0187148 1.2214 0.000976562 2.73548V35.2622C0.0187148 36.7776 1.25152 38.0003 2.77067 38.0003C2.78334 38.0003 2.79474 38.0003 2.80741 38.0003H35.1859C35.1961 38.0003 35.2087 38.0003 35.2214 38.0003C36.7418 38.0003 37.9772 36.7801 38.0012 35.2648V35.2622V2.73802C37.9772 1.2214 36.7418 0 35.2202 0C35.2075 0 35.1961 0 35.1834 0H35.1897ZM11.2711 32.3823H5.62778V14.2501H11.2711V32.3823ZM8.45069 11.7693C6.64519 11.7693 5.18306 10.3059 5.18306 8.50166C5.18306 6.69743 6.64646 5.23403 8.45069 5.23403C10.2549 5.23403 11.7183 6.69617 11.7183 8.50039C11.7183 8.50166 11.7183 8.50293 11.7183 8.50546C11.7183 10.3084 10.2562 11.7706 8.45322 11.7706C8.45196 11.7706 8.45069 11.7706 8.44942 11.7706L8.45069 11.7693ZM32.3744 32.3823H26.7476V23.5652C26.7476 21.4619 26.7046 18.7569 23.8158 18.7569C20.8814 18.7569 20.4341 21.0451 20.4341 23.4106V32.3836H14.8073V14.2514H20.2124V16.7233H20.2859C21.3349 14.9558 23.2329 13.7902 25.4033 13.7902C25.4806 13.7902 25.5566 13.7914 25.6327 13.794H25.6213C31.3228 13.794 32.377 17.5469 32.377 22.4312V32.3836L32.3744 32.3823Z" fill="#FCFCFD"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_163_438">
+                        <rect width="38" height="38" fill="white"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                    </div>        
+                </a>
+                </div>
+            </div>
+            </div>
+            <a href="#" class="backtotop animatedbox svgarrow">
+            <svg width="64" height="64" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="navarrow">
+                <rect id="Rectangle 24" x="69.8787" y="36" width="47.9117" height="47.9117" rx="10.5" transform="rotate(135 69.8787 36)" stroke="#FCFCFD" stroke-width="3"/>
+                <path id="Icon" d="M35.7251 46.478V20.9309M35.7251 20.9309L26.1791 30.5111M35.7251 20.9309L45.271 30.5111" stroke="#FCFCFD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                </svg>          
+            </a>
+        </div>
+    </body>
+</html>

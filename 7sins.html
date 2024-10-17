@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sneha A K</title>
+        <link rel="icon" href="myfavicon.svg" type="image/svg+xml">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="Portfolio.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <style>
+            .thecar{
+                align-items: center;
+                display: flex;
+                margin-top: 36px;
+            }
+            .buttonholding{
+                align-self: center;
+            }
+            .sinscarousel {
+                width: 100%;
+                position: relative;
+                margin: 36px 0;
+                overflow: visible;
+                padding: 0 80px; 
+            }
+  
+            .sinscontainer {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+                align-items: center;
+                justify-content: flex-start;
+            }
+  
+            .sincard {
+                flex: 0 0 33.3333%; 
+                opacity: 0.5;
+                transform: scale(0.9);
+                transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 16px;
+                overflow: hidden;
+            }
+  
+            .sincard img {
+                width: 100%;
+                height: auto;
+                border-radius: 16px;
+            }
+  
+  
+            .sincard.active {
+                opacity: 1;
+                transform: scale(1.1); 
+                border-radius: 16px;
+                justify-self: center;
+                z-index: 3;
+            }
+  
+            .prev, .next {
+                position: absolute;
+                transform: translateY(-50%);
+                background-color: transparent;
+                border: none;
+                padding: 16px;
+                cursor: pointer;
+            }
+  
+            .prev {
+                left: 8%;
+            }
+  
+            .next {
+                right: 8%;
+            }
+            .talking {
+                padding-top: 16px;
+            }
+
+            @media (max-width:600px){
+                .sinscarousel {
+                    transform: scale(3);
+                    transform-origin: center;
+                    margin-bottom: 25%;
+                    margin-top: 36%;
+                }
+                .sincard img {
+                    border-radius: 2px;
+                }
+                .talking{
+                    padding-top: 20%;
+                    display: flex;
+                }
+                .sincard{
+                    opacity: 0.25;
+                    border-radius: 8px;
+                }
+                .sincard.active{
+                    border-radius: 8px;
+                }
+                .projhead{
+                    margin: 0 10%;
+                    width: 90%;
+                }
+            }
+  
+
+  
+  
+          </style>
+    </head>
+    <body>
+        <!--back button-->
+        <a href="PortfolioProjects.html" class="animatedbox2 svgarrow">
+            <svg width="64" height="64" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg" class="rotated">
+              <g id="navarrow">
+              <rect id="Rectangle 24" x="69.8787" y="36" width="47.9117" height="47.9117" rx="10.5" transform="rotate(135 69.8787 36)" stroke="#FCFCFD" stroke-width="3"/>
+              <path id="Icon" d="M35.7251 46.478V20.9309M35.7251 20.9309L26.1791 30.5111M35.7251 20.9309L45.271 30.5111" stroke="#FCFCFD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              </svg>          
+        </a>
+        <div class="projdesc2">
+            <div class="projhead" >
+                <h1>The Seven Deadly Sins</h1>
+                <h2>Poster Design and Animation</h2>
+            </div>
+
+            <div class="thecar">
+                <div class="sinscarousel">
+                    <div class="sinscontainer">
+                        <div class="sincard"><img src="sinpride.png"></div>
+                        <div class="sincard"><img src="sinenvy.png"></div>
+                        <div class="sincard"><img src="sinwrath.png"></div>
+                        <div class="sincard"><img src="sinsloth.png"></div>
+                        <div class="sincard"><img src="singreed.png"></div>
+                        <div class="sincard"><img src="singluttony.png"></div>
+                        <div class="sincard"><img src="sinlust.png"></div>
+                    </div>
+                </div>
+                <script>
+                    let slideIndex = 1;
+                    const slides = document.querySelectorAll('.sincard');
+                    const totalSlides = slides.length;
+              
+                    // Initial setup
+                    function setupCarousel() {
+                        showSlide(slideIndex);
+                    }
+              
+                    // Function to show a specific slide
+                    function showSlide(index) {
+                        if (index >= totalSlides) {
+                            slideIndex = 0;
+                        } else if (index < 0) {
+                            slideIndex = totalSlides - 1; 
+                        }
+              
+                        slides.forEach((slide, i) => {
+                            slide.classList.remove('active');
+                            if (i === slideIndex) {
+                                slide.classList.add('active');
+                            }
+                        });
+              
+                        const carouselContainer = document.querySelector('.sinscontainer');
+                        const slideWidth = slides[0].offsetWidth;
+                        const containerWidth = document.querySelector('.sinscarousel').offsetWidth;
+                        
+                        // Calculate the padding added to the carousel (80px each side)
+                        const padding = 80;
+              
+                        // Adjust the offset to center the active card, accounting for padding
+                        const offset = (containerWidth / 2) - (slideWidth / 2) - padding;
+              
+                        // Translate to center the active slide
+                        const translation = -(slideIndex * slideWidth) + offset;
+              
+                        carouselContainer.style.transform = `translateX(${translation}px)`;
+                    }
+              
+                    // Automatic sliding function
+                    function autoSlide() {
+                        slideIndex++;
+                        showSlide(slideIndex);
+                    }
+              
+                    // Set interval for automatic slide change (every 3 seconds)
+                    let slideInterval = setInterval(autoSlide, 3000);
+              
+                    // Manual navigation functions
+                    function nextSlide() {
+                        slideIndex++;
+                        showSlide(slideIndex);
+                        resetInterval();
+                    }
+              
+                    function prevSlide() {
+                        slideIndex--;
+                        showSlide(slideIndex);
+                        resetInterval();
+                    }
+              
+                    // Reset the interval when navigation buttons are clicked
+                    function resetInterval() {
+                        clearInterval(slideInterval);
+                        slideInterval = setInterval(autoSlide, 3000);
+                    }
+              
+                    // Initialize the carousel
+                    setupCarousel();
+              
+              
+              
+                  </script>
+                <div class="buttonholding">
+                    <button class="prev svgarrow" onclick="prevSlide()">
+                        <svg width="64" height="64" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="36" y="2.12132" width="47.9117" height="47.9117" rx="10.5" transform="rotate(45 36 2.12132)" stroke="#FCFCFD" stroke-width="3"/>
+                          <path d="M49.0938 36.2746H23.5467M23.5467 36.2746L33.1268 45.8205M23.5467 36.2746L33.1268 26.7286" stroke="#FCFCFD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>        
+                      </button>
+                      <button class="next svgarrow" onclick="nextSlide()">
+                        <svg width="64" height="64" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect y="2.12132" width="47.9117" height="47.9117" rx="10.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 34.5 0.62132)" stroke="#FCFCFD" stroke-width="3"/>
+                          <path d="M22.9062 36.2746H48.4533M48.4533 36.2746L38.8732 45.8205M48.4533 36.2746L38.8732 26.7286" stroke="#FCFCFD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>        
+                      </button>
+                </div>
+            </div>
+
+
+            
+        </div>            
+        <div class="projdesc talking">
+            <p class="minibod">Initially, I made posters experimenting on just typography for each of the seven deadly sins.<br></p>
+            <h2>Animated Trailer</h2>
+            <p class="minibod">Then, I animated the words and made a teaser trailer for the sins. The song used was <a href="https://open.spotify.com/track/06WUUNf7q18NZfjIsQFsfa?si=af01b2b2db484480" style="color: #61C0FF;">“Delusions of Saviour”</a> by Slayer.</p>
+            <video width="100%" height="auto" controls poster="sinthumbnail.svg" style="margin-top: 36px; border-radius: 16px;">
+                <source src="7sinscomp.mp4" type="video/mp4">
+            </video>
+        </div>
+        
+
+
+                <!--footer-->
+                <script>
+                    window.addEventListener('scroll', () => {
+                      const footer = document.querySelector('.footer');
+                      const footerPosition = footer.getBoundingClientRect().top;
+                      const windowHeight = window.innerHeight;
+                      if (footerPosition <= window.innerHeight) {
+                          footer.classList.add('sticky');
+                          document.querySelector('.footer').style.backgroundColor = '#0D0F1C';
+                      } else {
+                          footer.classList.remove('sticky');
+                          document.querySelector('.footer').style.backgroundColor = '#61C0FF';
+                      }
+                    });
+                  </script>
+                  <div class="footer">
+                    <div class="contact">
+                      <div class="footertext">
+                        <h4 class="fadeee minibod" style="color: #61C0FF; font-weight: 450;margin: 0%;">Tags</h4>
+                        <div class="footericons fadeee">
+                          <h6>Graphic Design, Motion Graphics</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <a href="#" class="backtotop animatedbox svgarrow">
+                      <svg width="64" height="64" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="navarrow">
+                        <rect id="Rectangle 24" x="69.8787" y="36" width="47.9117" height="47.9117" rx="10.5" transform="rotate(135 69.8787 36)" stroke="#FCFCFD" stroke-width="3"/>
+                        <path id="Icon" d="M35.7251 46.478V20.9309M35.7251 20.9309L26.1791 30.5111M35.7251 20.9309L45.271 30.5111" stroke="#FCFCFD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        </svg>          
+                    </a>
+                  </div>        
+            </body>
+        </html>
+    </body>
+</html>

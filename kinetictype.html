@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sneha A K</title>
+        <link rel="icon" href="myfavicon.svg" type="image/svg+xml">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="Portfolio.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <style>
+            @media (max-width:600px){
+                .projhead{
+                    margin: 0 2%;
+                }
+                video{
+                    width: 90vw;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!--back button-->
+        <a href="PortfolioProjects.html" class="animatedbox2 svgarrow">
+            <svg width="64" height="64" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg" class="rotated">
+              <g id="navarrow">
+              <rect id="Rectangle 24" x="69.8787" y="36" width="47.9117" height="47.9117" rx="10.5" transform="rotate(135 69.8787 36)" stroke="#FCFCFD" stroke-width="3"/>
+              <path id="Icon" d="M35.7251 46.478V20.9309M35.7251 20.9309L26.1791 30.5111M35.7251 20.9309L45.271 30.5111" stroke="#FCFCFD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              </svg>          
+        </a>
+        <div class="projdesc2">
+            <div class="projhead" >
+                <h1>Kinetic Typography</h1>
+                <h2>Lyric Video</h2>
+            </div>
+        </div>
+        <div class="projdesc" style="padding-top: 16px;overflow: visible;">
+            <p class="minibod">A lyric video for the song <a href="https://open.spotify.com/track/1gRK6QnBOpNtEDjYKftzTc?si=9ea8858ba621467e" style="color: #61C0FF;">“The Feminine Urge”</a>  by The Last Dinner Party that experiments on text effects and motion.</p>
+            <video width="100%" height="auto" controls poster="kintype.png" style="margin-top: 36px; border-radius: 16px;">
+                <source src="femurgevid.mp4" type="video/mp4">
+            </video>
+        </div>
+        
+
+
+        <!--footer-->
+        <script>
+            window.addEventListener('scroll', () => {
+                const footer = document.querySelector('.footer');
+                const footerPosition = footer.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (footerPosition <= window.innerHeight) {
+                    footer.classList.add('sticky');
+                    document.querySelector('.footer').style.backgroundColor = '#0D0F1C';
+                } else {
+                    footer.classList.remove('sticky');
+                    document.querySelector('.footer').style.backgroundColor = '#61C0FF';
+                }
+            });
+        </script>
+        <div class="footer">
+            <div class="contact">
+                <div class="footertext">
+                    <h4 class="fadeee minibod" style="color: #61C0FF; font-weight: 450;margin: 0%;">Tags</h4>
+                    <div class="footericons fadeee">
+                          <h6>Graphic Design, Motion Graphics, Kinetic Typography</h6>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="backtotop animatedbox svgarrow">
+                <svg width="64" height="64" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="navarrow">
+                <rect id="Rectangle 24" x="69.8787" y="36" width="47.9117" height="47.9117" rx="10.5" transform="rotate(135 69.8787 36)" stroke="#FCFCFD" stroke-width="3"/>
+                <path id="Icon" d="M35.7251 46.478V20.9309M35.7251 20.9309L26.1791 30.5111M35.7251 20.9309L45.271 30.5111" stroke="#FCFCFD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                </svg>          
+            </a>
+        </div>             
+    </body>
+</html>

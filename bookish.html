@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sneha A K</title>
+        <link rel="icon" href="myfavicon.svg" type="image/svg+xml">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="Portfolio.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <style>
+            .phonemock {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 36px;
+                max-height: min-content;
+                margin: 36px 0;
+                overflow: hidden;
+            }
+            
+            .mockcolumn {
+                overflow: hidden;
+            }
+            .col1, .col3 {
+                position: static;
+            }
+            .col2 {
+                position: sticky;
+                top: 20px; 
+                transition: transform 0.1s ease;
+            }
+            .projhead {
+                margin-right: 50%;
+                width: 100%;
+            }
+            @media screen and (max-width: 600px) {
+                .phonemock {
+                    gap: 8px;
+                    align-items: center;
+                }
+                .mockcolumn img{
+                    display: block;
+                    height: auto;
+                }
+                .mockcolumn{
+                    height: auto;
+                    z-index: 1;
+                }
+
+                .col2 {
+                    position: relative;
+                    z-index: 2;
+                }
+                .projhead{
+                    margin: auto;
+                    margin-left: 10%;
+                }
+            }
+    
+            img {
+                width: 100%;
+                height: auto;
+            }  
+            
+          </style>
+    </head>
+    <body>
+        <!--back button-->
+        <a href="PortfolioProjects.html" class="animatedbox2 svgarrow">
+            <svg width="64" height="64" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg" class="rotated">
+              <g id="navarrow">
+              <rect id="Rectangle 24" x="69.8787" y="36" width="47.9117" height="47.9117" rx="10.5" transform="rotate(135 69.8787 36)" stroke="#FCFCFD" stroke-width="3"/>
+              <path id="Icon" d="M35.7251 46.478V20.9309M35.7251 20.9309L26.1791 30.5111M35.7251 20.9309L45.271 30.5111" stroke="#FCFCFD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              </svg>          
+        </a>
+
+        
+        <div class="projdesc">
+            <div class="projhead">
+                <h1>Bookish</h1>
+                <h2>A Study Session App</h2>
+            </div>
+            <div style="display: flex;justify-content: center;width:100%" class="resizee">
+                <img src="bookishlogo.svg">
+            </div>
+            <div>
+                <h2>What is Bookish?</h2>
+                <p class="minibod">Bookish is an app designed after conducting research and observational studies in university study areas and arriving at a problem statement that students lack an organised, accessible and comfortable space which affects their productivity.</p>
+            </div>
+            <div class="phonemock">
+                <div class="mockcolumn col1">
+                  <img src="bookish1.svg">
+                </div>
+                <div class="mockcolumn col2">
+                    <img src="bookish2.svg">
+                </div>
+                <div class="mockcolumn col3">
+                    <img src="bookish3.svg">
+                </div>
+            </div>
+            <script>
+                window.addEventListener('scroll', function () {
+                const col2 = document.querySelector('.col2');
+                const scrollY = window.scrollY;
+
+                if (window.innerWidth > 600) {
+                    col2.style.transform = `translateY(${scrollY / 3.5}px)`;
+                } else {
+                    col2.style.transform = 'translateY(0)';
+                }
+            });
+            </script>
+            <div>
+                <p class="minibod">Bookish aspires to create a streamlined and structured system where students can manage their productivity wherever they are. It promotes the usage of university provided spaces for students’ needs.</p><br>
+                <h2>How it Came About</h2>
+                <p class="minibod">Study areas are one of the most commonly sought after places in colleges. This means that they are rarely empty for people who want to use the space for themselves.<br><br>
+                    Bookish helps students find study areas in their campus and reserve spots for when they want to use them.</p>
+            </div>
+            <div style="display: flex;justify-content: center;width:100%; padding:36px 0;">
+                <img src="bookishtab.svg">
+            </div>
+            <div>
+                <p class="minibod">The app is also connected to the study area, where the user can personalise their space and adjust their environment on spot to fit their comfort.</p>
+            </div>
+        </div>
+
+
+        <!--footer-->
+        <script>
+            window.addEventListener('scroll', () => {
+              const footer = document.querySelector('.footer');
+              const footerPosition = footer.getBoundingClientRect().top;
+              const windowHeight = window.innerHeight;
+              if (footerPosition <= window.innerHeight) {
+                  footer.classList.add('sticky');
+                  document.querySelector('.footer').style.backgroundColor = '#0D0F1C';
+              } else {
+                  footer.classList.remove('sticky');
+                  document.querySelector('.footer').style.backgroundColor = '#61C0FF';
+              }
+            });
+          </script>
+          <div class="footer">
+            <div class="contact">
+              <div class="footertext">
+                <h4 class="fadeee minibod" style="color: #61C0FF; font-weight: 450;margin: 0%;">Tags</h4>
+                <div class="footericons fadeee">
+                  <h6>Interaction Design, UI Design</h6>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="backtotop animatedbox svgarrow">
+              <svg width="64" height="64" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="navarrow">
+                <rect id="Rectangle 24" x="69.8787" y="36" width="47.9117" height="47.9117" rx="10.5" transform="rotate(135 69.8787 36)" stroke="#FCFCFD" stroke-width="3"/>
+                <path id="Icon" d="M35.7251 46.478V20.9309M35.7251 20.9309L26.1791 30.5111M35.7251 20.9309L45.271 30.5111" stroke="#FCFCFD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                </svg>          
+            </a>
+          </div>        
+    </body>
+</html>
